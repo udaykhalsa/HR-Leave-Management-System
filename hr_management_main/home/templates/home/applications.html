@@ -1,0 +1,49 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+    
+    <div class="applicationsContainer">
+    <ul>
+    {% for applications in applications  %}
+    
+    <li>
+        <div class="applicationList">
+            <table style="width:100%">
+                <tr>
+                    <th>Request ID</th>
+                    <th>Employee</th>
+                    <th>Reason for Leave</th>
+                    <th>From Date</th>
+                    <th>To Date</th>
+                    <th>Approve/Deny</th>
+                </tr>
+                <tr>
+                    <td>{{ applications.id }}</td>
+                    <td>{{ applications.user }}</td>
+                    <td>{{ applications.reason }}</td>
+                    <td>{{ applications.from_date }}</td>
+                    <td>{{ applications.to_date }}</td>
+                    <td>
+                    <form method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" id="applications_id" name="applications_id" value="{{ applications.id }}">
+                    <input type="hidden" id="applications_user" name="applications_user" value="{{ applications.user }}">
+                    <input type="hidden" id="applications_reason" name="applications_reason" value="{{ applications.reason }}">
+                    <input type="hidden" id="applications_from_date" name="applications_from_date" value="{{ applications.from_date }}">
+                    <input type="hidden" id="applications_to_date" name="applications_to_date" value="{{ applications.to_date }}">
+                    <input class="appproveButton appproveButtonYes" type="submit" name="approve" value="Approve">
+                    <input type="submit" class="appproveButton appproveButtonNo"name="deny" value="Deny">
+                    </form>
+                    </td>
+                </tr>
+            </table>
+
+        </div
+    </li>
+
+    {% endfor %}
+    </ul>
+    </div>
+
+{% endblock content %}

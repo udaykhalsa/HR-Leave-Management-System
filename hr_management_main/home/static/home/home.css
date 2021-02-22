@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.applicationContainer input {
+    border-radius: 20px;
+    border: solid 2px #13274F;
+    outline: none !important;
+}
+
+.applicationContainer input[type="text"] {
+    height: 200px;
+    width: 500px;
+}
+
+.applicationContainer input[type="date"] {
+    height: 50px;
+    width: 200px;
+}
+
+.applicationContainer input[type="submit"] {
+    height: 50px;
+    width: 200px;
+}
+
+.applicationContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: azure;
+    height: min-content;
+    width: 60%;
+    box-shadow: 0px 4px 8px 0px #757575;
+    border-radius: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.applicationsContainer ul {
+    list-style: none;
+}
+
+.appproveButton {
+    outline: none !important;
+    border-radius: 10px;
+    border: none;
+    width: 100px;
+}
+
+.appproveButtonYes {
+    background-color: green;
+}
+
+
+.appproveButtonNo {
+    background-color: red;
+}
