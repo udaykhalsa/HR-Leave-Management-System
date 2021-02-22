@@ -15,6 +15,7 @@ class LeaveList(models.Model):
         ('Approved', 'Approved'),
         ('Denied', 'Denied')
     ]
+    # id = models.ForeignKey(LeaveApplication, max_length=255, on_delete=models.CASCADE)
     user = models.CharField(max_length=50, null=False)
     reason = models.CharField(max_length=255, null=False)
     from_date = models.DateField(auto_now=False, auto_now_add=False, null=False)

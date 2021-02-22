@@ -36,8 +36,30 @@ class LeaveApplicationForm(forms.ModelForm):
         ]
 
 class LeaveListForm(forms.ModelForm):
-    from_date = forms.DateField(input_formats=settings.DATE_INPUT_FORMATS)
-    to_date = forms.DateField(input_formats=settings.DATE_INPUT_FORMATS)
+    user = forms.CharField(widget=forms.TextInput(
+        attrs = {
+            'type': 'hidden',
+            'value': '{{ applications.user }}'
+        }
+    ))
+    reason = forms.CharField(widget=forms.TextInput(
+        attrs = {
+            'type': 'hidden',
+            'value': '{{ applications.reason }}'
+        }
+    ))
+    from_date = forms.DateField(input_formats=settings.DATE_INPUT_FORMATS, widget=forms.DateInput(
+        attrs = {
+            'type':'hidden',
+            'value': '{{ applications.from_date }}'
+        }
+    ))
+    to_date = forms.DateField(input_formats=settings.DATE_INPUT_FORMATS, widget=forms.DateInput(
+        attrs = {
+            'type':'hidden',
+            'value': '{{ applications.to_date }}'
+        }
+    ))
     class Meta:
         model = LeaveList
         fields = [

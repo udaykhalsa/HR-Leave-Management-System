@@ -1,0 +1,11 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    {% for status in status %}
+        <span>Your Leave Application from date {{ status.from_date }} to {{ status.to_date }} is {{ status.leave_status }}</span>
+    {% endfor %}
+
+
+{% endblock content %}

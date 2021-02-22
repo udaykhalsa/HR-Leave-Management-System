@@ -1,14 +1,11 @@
 {% extends 'home/base.html' %}
 {% load static %}
+
 {% block content %}
 
-    <div class = "applicationContainer">
-        <h1>Apply for Leave</h1>
-        <form method="POST" action="">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="Submit">
-        </form>
+    <div class="applicationContainer">
+        <a href="{% url 'apply_leave' %}"><button>Apply for Leave</button></a>
+        <a href="{% url 'leave_status' %}"><button>Show Status</button></a>
     </div>
 
-{% endblock %}
+{% endblock content %}

@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-DATE_FORMAT = ['%b. %d, %Y']
+DATE_INPUT_FORMATS = ['%b. %d, %Y']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
