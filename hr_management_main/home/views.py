@@ -28,8 +28,10 @@ def apply_leave_view(request):
 @login_required(login_url='login/')
 def leave_status_view(request):
     status = LeaveList.objects.filter(user=request.user)
+    pending_status = LeaveApplication.objects.filter(user=request.user)
     context = {
-        'status': status
+        'status': status,
+        'pending_status': pending_status
     }
     return render(request, 'home/leave_status.html', context)
 

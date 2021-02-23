@@ -26,10 +26,6 @@ body {
 
 .applicationContainer {
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
     background-color: azure;
     height: min-content;
     width: 60%;
@@ -38,6 +34,13 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+.applicationContainerHome {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
 }
 
 
@@ -59,4 +62,15 @@ body {
 
 .appproveButtonNo {
     background-color: red;
+}
+
+
+.applicationContainer button {
+    color: lightskyblue;
+}
+
+.showApplications {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }

@@ -16,14 +16,7 @@
                          <form method="POST">
                             {% csrf_token %}
                             {{ form.as_p }}
-
-                            {% comment %} {% if time > 9 and time <6 %} {% endcomment %}
-                            
-                            
-                            
-                            {% comment %} {% endif %} {% endcomment %}
-
-                            <input type="Submit">
+                            <input type="Submit" class="btn btn-blue text-center" value="Login">
                         </form>
                     </div>
                 </div>

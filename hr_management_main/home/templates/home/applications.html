@@ -4,14 +4,13 @@
 {% block content %}
     
     <div class="applicationsContainer">
-    <ul>
+    {% if applications %}
     {% for applications in applications  %}
     
-    <li>
         <div class="applicationList">
             <table style="width:100%">
                 <tr>
-                    <th>Request ID</th>
+                    {% comment %} <th>Request ID</th> {% endcomment %}
                     <th>Employee</th>
                     <th>Reason for Leave</th>
                     <th>From Date</th>
@@ -19,7 +18,7 @@
                     <th>Approve/Deny</th>
                 </tr>
                 <tr>
-                    <td>{{ applications.id }}</td>
+                    {% comment %} <td>{{ applications.id }}</td> {% endcomment %}
                     <td>{{ applications.user }}</td>
                     <td>{{ applications.reason }}</td>
                     <td>{{ applications.from_date }}</td>
@@ -40,10 +39,12 @@
             </table>
 
         </div
-    </li>
 
     {% endfor %}
-    </ul>
+    {% else %}
+        <span>No Applications to see</span>
+    {% endif %}
+
     </div>
 
 {% endblock content %}

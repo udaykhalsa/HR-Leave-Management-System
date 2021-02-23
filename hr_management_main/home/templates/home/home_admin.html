@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-
-    <a href="{% url 'applications' %}"><button class="showApplications">Show Leave Applications</button></a>
-
+    <div class="showApplications">
+        <a href="{% url 'applications' %}"><button class="btn btn-secondary btn-lg">Show Leave Applications</button></a>
+    </div>
 {% endblock content %}

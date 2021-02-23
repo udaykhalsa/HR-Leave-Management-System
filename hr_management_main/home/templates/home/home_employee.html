@@ -3,9 +3,9 @@
 
 {% block content %}
 
-    <div class="applicationContainer">
-        <a href="{% url 'apply_leave' %}"><button>Apply for Leave</button></a>
-        <a href="{% url 'leave_status' %}"><button>Show Status</button></a>
+    <div class="applicationContainer applicationContainerHome">
+        <a href="{% url 'apply_leave' %}"><button class="btn btn-secondary btn-lg">Apply for Leave</button></a>
+        <a href="{% url 'leave_status' %}"><button class="btn btn-secondary btn-lg">Show Status</button></a>
     </div>
 
 {% endblock content %}

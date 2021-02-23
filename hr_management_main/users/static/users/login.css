@@ -16,6 +16,11 @@ body {
     border-radius: 0px
 }
 
+.border-line {
+    border-right: 1px solid #EEEEEE;
+    border-radius: 30px;
+}
+
 .text-sm {
     font-size: 14px !important
 }

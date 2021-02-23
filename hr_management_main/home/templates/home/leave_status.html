@@ -3,9 +3,16 @@
 
 {% block content %}
 
+    {% if status %}
     {% for status in status %}
-        <span>Your Leave Application from date {{ status.from_date }} to {{ status.to_date }} is {{ status.leave_status }}</span>
+        <span>Your Leave Application from date {{ status.from_date }} to {{ status.to_date }} is {{ status.leave_status }}</span><br>
     {% endfor %}
-
+    {% elif pending_status %}
+    {% for pending_status in pending_status %}
+        <span>Your Leave Application from date {{ pending_status.from_date }} to {{ pending_status.to_date }} is Pending...</span>    
+    {% endfor %}
+    {% else %}
+    <span>You don't have requested an application</span>
+    {% endif %}
 
 {% endblock content %}
