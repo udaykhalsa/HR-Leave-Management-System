@@ -2,7 +2,7 @@ On linux/mac
 ```
 source hr_management_env/bin/activate
 ```
-inside the main folder
+in the root folder
 
 
 Create a superuser/admin with
